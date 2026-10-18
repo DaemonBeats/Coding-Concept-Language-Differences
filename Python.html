@@ -53,8 +53,10 @@
 						<div class="inner">
 							<h1>Python</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<p>Welcome to Python! Python is a high-level, interpreted programming language known for its simplicity and readability and is often used for web development, data analysis, artificial intelligence, and more.</p>
+
 							<h2><u>Variables</u></h2>
-							<p>Variables are named storage locations in memory that hold values. In Python, variables are created when you assign a value to them, and are dynamically typed, unlike the other languages on this site. This means that they can change types (like from a string of characters to an integer), and are automatically assigned a type when declaring them.</p>
+							<p>In Python, variable names refer to values, and each value has a type. When you assign a value to a name, Python determines that value's type. Because Python is dynamically typed, you can later assign a value of a different type to the same name.</p>
 
 							<h3>Declaring numbers</h3>
 							<p>In Python, you can assign a numeric value to a variable without declaring its type first, like <code>x = 5</code>. Python determines the value’s type from what you assign (dynamic typing).</p>
@@ -73,9 +75,9 @@
 							<p>Note that the first letter is capitalized.</p>
 
 							<h3>Null Value Declaration</h3>
-							<p>In Python, you can assign the null value (None) to a variable using the keyword None. You'd do this to indicate that the variable has no value at the time of declaration.</p>
+							<p>In Python, you can assign the null value (<code>None</code>) to a variable using the keyword <code>None</code>. You might do this to indicate that the variable does not currently refer to a meaningful value.</p>
 							<p>None: <code>x = None</code></p>
-							<p>Note that None (capitalised) is not the same as 0 or an empty string; it represents the absence of a value.</p>
+							<p>Note that None (capitalized) is not the same as 0 or an empty string; it represents the absence of a value.</p>
 
 							<h3>Type Changing</h3>
 							<p>Python is dynamically typed, which means you can change the type of a variable at any time by assigning it a new value of a different type.</p>
@@ -109,7 +111,7 @@
 							<p>The above example will display the text "Hello, Alice!" to the user. Combining static text and variables in Python uses f-strings, which are prefixed with an <code>f</code> before the opening quote, and use <code>{}</code> to embed variable values.</p>
 
 							<h3>Newlines</h3>
-							<p>In Python, new expressions and newlines are handled automatically when using the <code>print()</code> function. Each call to <code>print()</code> will output text followed by a newline character, so subsequent calls will appear on a new line.</p>
+							<p>In Python, newlines are handled automatically when using the <code>print()</code> function. Each call to <code>print()</code> will output text followed by a newline character, so subsequent calls will appear on a new line.</p>
 							<pre><code>print("Hello, World!")&#10;print("How are you?")</code></pre>
 							<p>This will display "Hello, World!" on one line and "How are you?" on the next line.</p>
 							<p>Alternatively, you can use the <code>\n</code> escape sequence to insert a newline character within a single <code>print()</code> call:</p>
@@ -117,6 +119,7 @@
 							<p>Note: For long expressions in Python that you want to split across multiple lines for readability without Python reading them as multiple commands, you can use parentheses<code>()</code> to group the expression, and Python will allow it to continue on the next line without any special characters.</p>
 							<pre><code>x = (&#10;number1 &#10;+ number2&#10;)</code></pre>
 							<p>In the above example, although the expression is split across multiple lines, Python treats it as a single expression due to the parentheses.</p>
+							<p>Python usually uses newlines to separate statements. Semicolons can separate multiple simple statements on one line, but they are rarely needed.</p>
 
 							<h2><u>Conditionals</u></h2>
 							<p>Conditionals in Python are used to execute different blocks of code based on certain conditions. The most common conditional statement is the <code>if</code> statement.</p>
@@ -133,9 +136,9 @@
 								<li><code>&gt;=</code>: Greater than or equal to</li>
 								<li><code>&lt;=</code>: Less than or equal to</li>
 							</ul>
-							<p>Note that the equals operator is two == signs, not one. Using a single = sign will result in an assignment, not a comparison.</p>
-							<pre><code>if age == 18:&#10;age = 18</code></pre>
-							<p>In the above block, the first line checks if age is 18, while the second sets <code>age</code>'s value to 18.</p>
+							<p>Note that the equality operator uses two <code>=</code> signs. A single <code>=</code> assigns a value rather than comparing values.</p>
+							<pre><code>if age == 18:&#10;    print("Age is 18")&#10;age = 18</code></pre>
+							<p>In the above block, the first line would check if <code>age</code> is 18, while the third sets <code>age</code>'s value to 18 (the two statements are not connected).</p>
 
 							<h3>Else and Elif Statements</h3>
 							<p>Python also provides <code>else</code> and <code>elif</code> statements to handle multiple conditions:</p>
@@ -176,7 +179,7 @@
 							<h3>For Loop</h3>
 							<p>The <code>for</code> loop in Python is used to iterate over a sequence (such as a list, tuple, or string):</p>
 							<pre><code>fruits = ["apple", "banana", "cherry"]&#10;for fruit in fruits:&#10;    print(fruit)</code></pre>
-							<p>In simpler terms, the above is saying "for each fruit in the list of fruits, print that specific fruit before moving on to the next one in the list". In the <code>for</code> statement itself, the singular term fruit is the name for the new loop variable that takes on the value of each element in the sequence during each iteration. It can technically be anything, but it's best to make it match the type of whatever it's representing:</p>
+							<p>In simpler terms, the above is saying "for each fruit in the list of fruits, print that specific fruit before moving on to the next one in the list". In the <code>for</code> statement itself, the singular term fruit is the name for the new loop variable that takes on the value of each element in the sequence during each iteration. It can technically be anything, but it's best to make it describe whatever it's representing:</p>
 							<pre><code>fruits = ["apple", "banana", "cherry"]&#10;for fruit in fruits:&#10;    print(fruit)&#10;&#10;Also valid, but not as descriptive:&#10;&#10;fruits = ["apple", "banana", "cherry"]&#10;for x in fruits:&#10;    print(x)</code></pre>
 							<p>Note that the for statement, like the if statement, ends with a colon (<code>:</code>)</p>
 
@@ -189,8 +192,8 @@
 
 							<h3>While Loop</h3>
 							<p>The <code>while</code> loop in Python is used to execute a block of code repeatedly as long as a condition is true:</p>
-							<pre><code>i = 0&#10;while i < 5:&#10;    print(i)</code></pre>
-							<p>What's going on here is basically: "while i is less than 5, print the value of i". i will increase by 1 with each iteration. Note that when using while loops, i (or whatever variable is used) must be initialized before the loop.</p>
+							<pre><code>i = 0&#10;while i < 5:&#10;    print(i)&#10;    i += 1</code></pre>
+							<p>What's going on here is basically: "while i is less than 5, print the value of i, then increase i by 1". Note that when using while loops, i (or whatever variable is used) must be initialized before the loop.</p>
 
 							<h3>Loop Control Statements</h3>
 							<p>Python provides several control statements to manage the flow of loops:</p>
@@ -199,79 +202,141 @@
 								<li><code>continue</code>: Skips the rest of the current iteration and moves to the next one.</li>
 							</ul>
 							<pre><code>for num in range(1, 10):&#10;    if num == 3:&#10;        continue&#10;    if num == 6:&#10;        break&#10;    print(num)</code></pre>
-							<p>This assigns <code>num</code> the initial value of 1 and will print the numbers 1, 2, 4, and 5, skipping 3 because of <code>continue</code> and stopping completely when <code>num</code> equals 6 because of <code>break</code>, even though range was intially set to 10.</p>
+							<p>The loop starts with <code>num</code> equal to 1 and prints 1, 2, 4, and 5. <code>continue</code> skips 3, and <code>break</code> ends the loop when <code>num</code> reaches 6. The stop value 10 is excluded from <code>range</code>.</p>
 
 							<h3>Else Clause in Loops</h3>
-							<p>The <code>else</code> clause can be used with both <code>for</code> and <code>while</code> loops. It is executed when the loop condition becomes false:</p>
+							<p>The <code>else</code> clause can be used with both <code>for</code> and <code>while</code> loops. It runs when the loop finishes without encountering <code>break</code>:</p>
 							<pre><code>for i in range(5):&#10;    print(i)&#10;else:&#10;    print("Loop finished")</code></pre>
-							<p>Code in the else block will only execute if the loop completes normally (i.e., without being terminated by a <code>break</code> statement).</p>
+							<p>Code in the else block will execute <u>only</u> if the loop completes normally.</p>
 							<p>Example of when the else statement wouldn't be executed:</p>
 							<pre><code>for i in range(5):&#10;    print(i)&#10;    if i == 3:&#10;        break&#10;else:&#10;    print("Loop finished")</code></pre>
-							<p>Since the loop is terminated by <code>break</code> before getting to 5, the else block is skipped.</p>
+							<p>When <code>i</code> equals 3, <code>break</code> terminates the loop, so the <code>else</code> block is skipped.</p>
 
 							<h2><u>Functions</u></h2>
-							<p>Functions in Python are used when one expects to use certain blocks of code multiple times, but using different arguments each time. They are defined using the <code>def</code> keyword:</p>
-							<h3>Functions Without Arguments</h3>
-							<p>Functions without arguments are defined with an empty set of parentheses:</p>
+							<p>Functions in Python are used when one expects to use certain blocks of code multiple times, but using different arguments each time. They are defined using the <code>def</code> keyword.</p>
+							<h3>Functions Without Parameters</h3>
+							<p>Functions without parameters are defined with an empty set of parentheses:</p>
 							<pre><code>def greet():&#10;    print("Hello, World!")</code></pre>
 							<p>The above creates a function called <code>greet</code> that will always print "Hello, World!" when the function is called, no matter what.</p>
-							<h3>Functions with arguments</h3>
-							<p>If you want a function to be able to change its output based on an input, we can pass arguments into the function by assigning them a name in the () of the function declaration line:</p>
+							<h3>Functions with Parameters</h3>
+							<p>If you want a function to be able to change its output based on an input, we can pass arguments into the function by assigning them a parameter name in the () of the function declaration line:</p>
+							<p>Note: The terms "parameter" and "argument" are often used interchangeably, but strictly speaking, parameters are the variables defined in the function signature, while arguments are the values passed to the function when it is called.</p>
 							<pre><code>def greet(name):&#10;    print(f"Hello, {name}!")</code></pre>
-							<p>In the above block, the name of the function is <code>greet</code>, and the <code>name</code> parameter is used to pass a value to the function. Values only need to be passed into a function as parameters if the function will use it. In this case since it's printing the name, we need to pass a value into it as <code>name</code> as an argument so it knows what <code>name</code> is in the print line.</p>
-							<p>To call a function, you simply use its name followed by parentheses containing any required arguments:</p>
+							<p>In the above block, the function is named <code>greet</code>, and <code>name</code> is its parameter. A function call must provide values for all required parameters, even if the function doesn't use them. Here, <code>greet</code> uses <code>name</code> to build its output.</p>
+							<p>To call a function, you simply use its name followed by parentheses containing any required parameters:</p>
 							<pre><code>greet("Alice")  # Output: Hello, Alice!</code></pre>
-							<p>The above will call the <code>greet</code> function from before, passing in the string "Alice" as the <code>name</code> parameter of the function. In other words, "send the string 'Alice' to the <code>greet</code> function and set the function's <code>name</code> parameter to it, then do what the function says." Another word for parameter is "argument".</p>
-							<p>We can call a function multiple times in a row with different arguments, as they will execute independently:</p>
+							<p>The above will call the <code>greet</code> function from before, passing in the string "Alice" as the <code>name</code> argument of the function. In other words, "send the string 'Alice' to the <code>greet</code> function and set the function's <code>name</code> parameter to it, then do what the function says".</p>
+							<p>We can call a function multiple times in a row with different arguments, as each call runs independently:</p>
 							<pre><code>greet("Alice")  # Output: Hello, Alice!&#10;greet("Bob")    # Output: Hello, Bob!</code></pre>
 							<p>We can also pre-assign a value to the variable that we pass into the function:</p>
 							<pre><code>name = "Alice"&#10;greet(name)  # Output: Hello, Alice!</code></pre>
 
 							<h3>Return</h3>
-							<p></p>
+							<p>Return statements are used to send a value back to the caller of the function:</p>
+							<pre><code>def add(a, b):&#10;    return a + b</code></pre>
+							<p>In the above example, the <code>add</code> function takes two parameters, <code>a</code> and <code>b</code>, and returns their sum. When a function returns a value, you can assign that value to a variable or use it directly in an expression:</p>
+							<pre><code>result = add(3, 5)  # result is now 8&#10;print(add(3, 5))     # Output: 8</code></pre>
+
+							<h2><u>Classes and Objects</u></h2>
+							<p>In Python, functions package reusable behavior, while classes define a kind of object and provide a way to create instances of it. A class is a blueprint for creating objects, while an object is an instance of a class. For example, you could have a class named <code>Dog</code> and create a <code>Dog</code> object called <code>my_dog</code>:</p>
+							<pre><code>class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+my_dog = Dog("Doge", "Shiba Inu")</code></pre>
+							<p>In the above example, the <code>Dog</code> class has an <code>__init__</code> method that initializes each <code>Dog</code> object with a <code>name</code> and <code>breed</code> attribute. The <code>my_dog</code> object is an instance of the <code>Dog</code> class, initialized with the name "Doge" and breed "Shiba Inu". In other words, all <code>Dog</code>s will have a name and breed, which you pass in as arguments when you create an instance (object) of the class.</p>
+							<p>In simpler terms, every <code>Dog</code> object will have a <code>name</code> and <code>breed</code> attribute, but different <code>Dogs</code> will have different values for those attributes. I could make a <code>Dog</code> that's named Bobby that's a golden retriever, or another <code>Dog</code> that's named Scout and is a corgi.</p>
+							<p>*A method is like a function, but it belongs to a class instead of being standalone.</p>
+							<p>The <code>self</code> parameter refers to the specific <code>Dog</code> object being initialized. When you create a <code>Dog</code>, Python passes that object to <code>__init__</code> as <code>self</code>. Then <code>self.name = name</code> stores the supplied <code>name</code> on that object. It's like the object being initialized is saying "oh, the name of my<u>self</u>? It's equal to (the <code>name</code> that you passed in)."</p>
+							<p>Classes and Objects are the foundation of object-oriented programming (OOP) in Python. OOP does a lot to help keep code organized and maintainable.</p>
+
+							<h2><u>Summary + Combined Examples</u></h2>
+							<p>Now let's combine each concept we've learned into one code block. Let's say that I want to create a script that will be used to manage a character in a fantasy game, keeping track of their health, mana, and what would happen if they got attacked.</p>
+<pre><code>
+
+# Creating a class:
+class Character: # creates a class named Character, meaning that we can make multiple different Characters that have the same properties.
+
+	def __init__(self, name, health, mana): # uses __init__ to initialize the Character object with a name, health, and mana. What their name is and how much health and mana they have will be decided when we call the class creator to make the character as arguments.
+		self.name = name
+		self.health = health
+		self.mana = mana
+
+	# Creating a method (a function within a class):
+	def take_damage(self, damage): # this method is called take_damage and its arguments are self and damage. The self argument is used to refer to the specific Character object that is taking damage, and the damage argument is the amount of damage being taken.
+		self.health -= damage # this line reduces the Character's health by the amount of damage taken. The -= operator is a shorthand for self.health = self.health - damage.
 
 
+# Creating a function:
+def heal(character, amount): # this function will take a character object and an amount of health to heal them for. It will increase the character's health by the specified amount.
+     character.health += amount # this line increases the character's health by the specified amount.
 
+
+# Declaring a variable:
+takeThisMuchDamage = None # we set the variable's value to None (which is of type NoneType), so that we can assign a value to it later based on user input.
+
+# Creating an object using a class:
+player1 = Character("Alice", 100, 50) # we create a Character object named player1 with the name "Alice", 100 health, and 50 mana.
+
+# Input:
+takeThisMuchDamage = int(input("How much damage should the character take? ")) # we use the input() function to get user input, and convert it to an integer using int(). We can change the type of the variable thanks to Python's dynamic typing. For now, we assume that the user will input a valid number >= 0.
+
+# Calling an object's method, using the variable we declared earlier:
+player1.take_damage(takeThisMuchDamage) # notice that when calling a method on an object, we use the object_name.method_name, with a period in between the two. We also don't need to pass in the self argument. Python automatically passes the object itself as the first argument to the method. So we only need to pass in the damage argument.
+
+# Function call:
+heal(player1, 20) # we call the heal function, passing in player1 and 20 for the amount of health to heal. Notice that functions are called directly by name rather than through an object.
+
+ # Output:
+print(f"{player1.name} has {player1.health} health and {player1.mana} mana.") # this will print the character's current health and mana. Notice that when referring to the attributes of an object, we use the object_name.attribute_name, with a period in between the two.
+
+# Conditional:
+if player1.health > 10:
+     print(f"Congrats! {player1.name} is still alive!") # if the character's health is more than 10, this will trigger and the rest of the if/elif/else block will be skipped.
+elif player1.health > 0: # this will trigger if the character's health is greater than 0 but not greater than 10.
+     print(f"{player1.name} is critically injured. Be Careful!")
+else:
+     print("Your character has died. Game over.") # this will trigger at any point where health is less than or equal to 0, since all other possible health amount conditions have already been checked.
+
+# Loops:
+# Let's say that the character is poisoned, and will take damage over time:
+if player1.health > 0:
+     while player1.health > 0: # while the character's health is greater than 0, this loop will continue to run.
+		player1.take_damage(5) # the character takes 5 damage each iteration of the loop.
+		print(f"{player1.name} takes 5 poison damage and now has {player1.health} health.") # this output occurs each time the loop repeats.
+     print("Your character has died from the poison.") # this line runs after the loop ends because the loop condition is no longer true.
+
+</code></pre>
+							<p>Let's explain what we did above:</p>
+							<ol>
+								<li>We created a <code>Character</code> class with a name, health, and mana.</li>
+								<li>We made a method inside the class so that any <code>Character</code> could take damage.</li>
+								<li>We created a <code>heal</code> function that increases a character's health by the amount passed in when called.</li>
+								<li>We declared the variable <code>takeThisMuchDamage</code> with value <code>None</code> so that we could assign it a value later based on user input.</li>
+								<li>We created a <code>Character</code> object named <code>player1</code>, with the name "Alice", 100 health, and 50 mana.</li>
+								<li>We took input from the user, converted it to an integer, assigned it to <code>takeThisMuchDamage</code></li>
+								<li>We called the <code>take_damage</code> method on <code>player1</code>, using the amount specified by the user's input.</li>
+								<li>We called the <code>heal</code> function to heal <code>player1</code> by 20.</li>
+								<li>We displayed <code>player1</code>'s current health and mana.</li>
+								<li>We used a conditional to check <code>player1</code>'s health and display an appropriate message.</li>
+								<li>If <code>player1</code> was still alive, we used a loop to simulate them taking poison damage until their health was no longer above 0.</li>
+								<li>If <code>player1</code> was still alive, we displayed a message after the poison loop saying that they had died from the poison.</li>
+							</ol>
+							<p>With all of the code above, we can create a character, have it take a single instance of damage, take damage over time, heal it, and change the amount of damage it takes!</p>
+							<p>Now that you've seen a longer chunk of script, a couple of final things to note:</p>
+							<ol>
+								<li>In Python, we don't use {} to dictate blocks of code, like other languages do. Instead, we use indentation. That's how blocks like functions, classes, methods, and conditionals will know what's a part of them and what's not. We can indent multiple times, like we did in the class. The class had multiple methods that were indented once to show that they were a part of the class, and the content of those methods was indented twice to show that they were a part of the methods.</li>
+								<li>In Python, classes and functions are typically defined near the beginning of a script so that they can be used later in the program. After these definitions, programmers often create variables, collect user input, create objects, and call functions and methods to perform the program's main tasks.</li>
+							</ol>
 						</div>
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy;2026 Jack Roundy, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
 							</ul>
 						</div>
 					</footer>
