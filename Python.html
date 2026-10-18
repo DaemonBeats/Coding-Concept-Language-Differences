@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Python - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="Python.html">Python</a></li>
+							<li><a href="C%23.html">C#</a></li>
+							<li><a href="cpp.html">C++</a></li>
+							<li><a href="Java.html">Java</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Python</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h2><u>Variables</u></h2>
+							<p>Variables are named storage locations in memory that hold values. In Python, variables are created when you assign a value to them, and are dynamically typed, unlike the other languages on this site. This means that they can change types (like from a string of characters to an integer), and are automatically assigned a type when declaring them.</p>
+
+							<h3>Declaring numbers</h3>
+							<p>In Python, you can assign a numeric value to a variable without declaring its type first, like <code>x = 5</code>. Python determines the value’s type from what you assign (dynamic typing).</p>
+							<p>Int: <code>x = 5</code></p>
+							<p>Float: <code>x = 5.0</code></p>
+
+							<h3>Declaring Strings</h3>
+							<p>Strings in Python are sequences of characters enclosed in quotes. You can create a string by enclosing text in single or double quotes.</p>
+							<p>Single quotes: <code>x = 'Hello, World!'</code></p>
+							<p>Double quotes: <code>x = "Hello, World!"</code></p>
+
+							<h3>Declaring Booleans</h3>
+							<p>Booleans in Python represent the truth values True and False.</p>
+							<p>True: <code>x = True</code></p>
+							<p>False: <code>x = False</code></p>
+							<p>Note that the first letter is capitalized.</p>
+
+							<h3>Null Value Declaration</h3>
+							<p>In Python, you can assign the null value (None) to a variable using the keyword None. You'd do this to indicate that the variable has no value at the time of declaration.</p>
+							<p>None: <code>x = None</code></p>
+							<p>Note that None (capitalised) is not the same as 0 or an empty string; it represents the absence of a value.</p>
+
+							<h3>Type Changing</h3>
+							<p>Python is dynamically typed, which means you can change the type of a variable at any time by assigning it a new value of a different type.</p>
+							<p>For example, you can start with an integer:</p>
+							<p><code>x = 5</code></p>
+							<p>And then change it to a string:</p>
+							<p><code>x = "Hello, World!"</code></p>
+							<p>x will now hold a string value, and will no longer hold the int value of 5.</p>
+
+							<h2><u>Input/Output</u></h2>
+							<h3>Input</h3>
+							<p>Python provides built-in functions for input and output operations. The <code>input()</code> function is used to read input from the user, and the <code>print()</code> function is used to display output.</p>
+							<p><code>name = input("What is your name? ")</code></p>
+							<p>In the example above, the program will display "What is your name?", then take the input from the user and assign it to the variable <code>name</code>. Note that in this example we're also declaring <code>name</code> as a new variable. If we had already declared <code>name</code> before, it'd simply be replaced with the new input value.</p>
+							<p>Note that the <code>input()</code> function always returns a string, so if you need to convert it to another type (e.g., an integer), you'll need to use a conversion function:</p>
+							<p><code>age = int(input("What is your age? "))</code></p>
+
+							<h3>Static Output</h3>
+							<p>The <code>print()</code> function is used to display output to the user.</p>
+							<p><code>print("Hello, World!")</code></p>
+							<p>The above example will display the text "Hello, World!" to the user.</p>
+
+							<h3>Variable Output</h3>
+							<p>You can also use the <code>print()</code> function to display the value of a variable:</p>
+							<pre><code>name = "Alice"&#10;print(name)</code></pre>
+							<p>The above example will display the value of the variable <code>name</code>, which is "Alice".</p>
+
+							<h3>Static + Variable Output</h3>
+							<p>You can also combine static text with variable values in the <code>print()</code> function:</p>
+							<pre><code>name = "Alice"&#10;print(f"Hello, {name}!")</code></pre>
+							<p>The above example will display the text "Hello, Alice!" to the user. Combining static text and variables in Python uses f-strings, which are prefixed with an <code>f</code> before the opening quote, and use <code>{}</code> to embed variable values.</p>
+
+							<h3>Newlines</h3>
+							<p>In Python, new expressions and newlines are handled automatically when using the <code>print()</code> function. Each call to <code>print()</code> will output text followed by a newline character, so subsequent calls will appear on a new line.</p>
+							<pre><code>print("Hello, World!")&#10;print("How are you?")</code></pre>
+							<p>This will display "Hello, World!" on one line and "How are you?" on the next line.</p>
+							<p>Alternatively, you can use the <code>\n</code> escape sequence to insert a newline character within a single <code>print()</code> call:</p>
+							<pre><code>print("Hello, World!\nHow are you?")</code></pre>
+							<p>Note: For long expressions in Python that you want to split across multiple lines for readability without Python reading them as multiple commands, you can use parentheses<code>()</code> to group the expression, and Python will allow it to continue on the next line without any special characters.</p>
+							<pre><code>x = (&#10;number1 &#10;+ number2&#10;)</code></pre>
+							<p>In the above example, although the expression is split across multiple lines, Python treats it as a single expression due to the parentheses.</p>
+
+							<h2><u>Conditionals</u></h2>
+							<p>Conditionals in Python are used to execute different blocks of code based on certain conditions. The most common conditional statement is the <code>if</code> statement.</p>
+							<pre><code>age = 18&#10;if age >= 18:&#10;    print("You are an adult.")</code></pre>
+							<p>The above example will display "You are an adult." if the variable <code>age</code> is greater than or equal to 18. Note that at the end of a conditional line, you must have a <code>:</code></p>
+
+							<h3>Conditional Operators</h3>
+							<p>Python provides several conditional operators that can be used in conjunction with the <code>if</code> statement:</p>
+							<ul>
+								<li><code>==</code>: Equal to</li>
+								<li><code>!=</code>: Not equal to</li>
+								<li><code>&gt;</code>: Greater than</li>
+								<li><code>&lt;</code>: Less than</li>
+								<li><code>&gt;=</code>: Greater than or equal to</li>
+								<li><code>&lt;=</code>: Less than or equal to</li>
+							</ul>
+							<p>Note that the equals operator is two == signs, not one. Using a single = sign will result in an assignment, not a comparison.</p>
+							<pre><code>if age == 18:&#10;age = 18</code></pre>
+							<p>In the above block, the first line checks if age is 18, while the second sets <code>age</code>'s value to 18.</p>
+
+							<h3>Else and Elif Statements</h3>
+							<p>Python also provides <code>else</code> and <code>elif</code> statements to handle multiple conditions:</p>
+							<pre><code>age = 17&#10;if age >= 18:&#10;    print("You are an adult.")&#10;else:&#10;    print("You are not an adult.")</code></pre>
+							<p>The <code>else</code> block is executed if the condition in the <code>if</code> statement is false.</p>
+							<pre><code>score = 85&#10;if score >= 90:&#10;    print("Grade: A")&#10;elif score >= 80:&#10;    print("Grade: B")&#10;else:&#10;    print("Grade: C")</code></pre>
+							<p>The <code>elif</code> block allows you to check additional conditions if the previous conditions are false. In Python, if an if/elif statement is found true, then the rest of the if/elif/else block will be skipped after executing the code inside the statement that triggered true.</p>
+
+							<h3>Combining Conditions</h3>
+							<p>Python also provides logical operators to combine multiple conditions:</p>
+							<ul>
+								<li><code>and</code>: Both conditions must be true</li>
+								<li><code>or</code>: At least one condition must be true</li>
+								<li><code>not</code>: Negates the condition</li>
+							</ul>
+							<pre><code>age = 18&#10;has_license = True&#10;if age >= 18 and has_license:&#10;    print("You can drive.")</code></pre>
+							<p>For the <code>and</code> operator, both conditions must be true for the block to execute. For the <code>or</code> operator, at least one condition must be true. For the <code>not</code> operator, the condition is checked for falsity (for example, if we had <code>x = 5</code> and <code>if not x == 5</code>, the if statement would evaluate to False and not trigger). You may have any combination and number of these operators to create complex conditions.</p>
+
+							<h3>Shorthand If</h3>
+							<p>Python also provides a shorthand syntax for simple if statements that have only one statement to execute:</p>
+							<pre><code>if age >= 18: print("You are an adult.")</code></pre>
+
+							<h3>Ternary Operator</h3>
+							<p>Python also provides a ternary operator for simple conditional assignments:</p>
+							<pre><code>age = 18&#10;status = "adult" if age >= 18 else "not adult"</code></pre>
+							<p>The above example assigns "adult" to the variable <code>status</code> if the variable <code>age</code> is greater than or equal to 18, otherwise it assigns "not adult". You can also directly return the result of the ternary operator in a function instead of assigning it to a variable:</p>
+							<pre><code>def get_status(age):&#10;    return "adult" if age >= 18 else "not adult"</code></pre>
+							<p>Functions are covered further down, but what this is doing is taking an age variable, giving it to the function get_status, and returning the appropriate status based on the condition.</p>
+
+							<h3>Matching</h3>
+							<p>In python, matching is done using the <code>match</code> statement, which is similar to a switch statement in other languages:</p>
+							<pre><code>status_code = 404&#10;match status_code:&#10;    case 200:&#10;        print("OK")&#10;    case 404:&#10;        print("Not Found")&#10;    case _:&#10;        print("Unknown Status")</code></pre>
+							<p>In the above example, the <code>match</code> statement checks the value of <code>status_code</code> and executes the corresponding <code>case</code> block. The underscore <code>_</code> acts as a wildcard that matches any value not explicitly handled by the previous cases. Match is better used when checking for limited specific values, otherwise it's more common to use if/elif statements.</p>
+
+							<h2><u>Loops</u></h2>
+							<p>Loops are used to execute a block of code repeatedly. Python provides two main types of loops: <code>for</code> and <code>while</code>.</p>
+
+							<h3>For Loop</h3>
+							<p>The <code>for</code> loop in Python is used to iterate over a sequence (such as a list, tuple, or string):</p>
+							<pre><code>fruits = ["apple", "banana", "cherry"]&#10;for fruit in fruits:&#10;    print(fruit)</code></pre>
+							<p>In simpler terms, the above is saying "for each fruit in the list of fruits, print that specific fruit before moving on to the next one in the list". In the <code>for</code> statement itself, the singular term fruit is the name for the new loop variable that takes on the value of each element in the sequence during each iteration. It can technically be anything, but it's best to make it match the type of whatever it's representing:</p>
+							<pre><code>fruits = ["apple", "banana", "cherry"]&#10;for fruit in fruits:&#10;    print(fruit)&#10;&#10;Also valid, but not as descriptive:&#10;&#10;fruits = ["apple", "banana", "cherry"]&#10;for x in fruits:&#10;    print(x)</code></pre>
+							<p>Note that the for statement, like the if statement, ends with a colon (<code>:</code>)</p>
+
+							<h3>For Loop with Range</h3>
+							<p>The <code>for</code> loop can also be used with the <code>range()</code> function to iterate over a sequence of numbers:</p>
+							<pre><code>for i in range(5):&#10;    print(i)</code></pre>
+							<p>This will print the numbers 0 through 4. The <code>range()</code> function generates a sequence of numbers from 0 to the specified number in range (not including the specified number itself.) You can also dictate the increment at which i increases, as well as where it starts from:</p>
+							<pre><code>for i in range(2, 10, 2):&#10;    print(i)</code></pre>
+							<p>This will print the numbers 2, 4, 6, and 8, counting up to 10 (not including 10), in steps of 2.</p>
+
+							<h3>While Loop</h3>
+							<p>The <code>while</code> loop in Python is used to execute a block of code repeatedly as long as a condition is true:</p>
+							<pre><code>i = 0&#10;while i < 5:&#10;    print(i)</code></pre>
+							<p>What's going on here is basically: "while i is less than 5, print the value of i". i will increase by 1 with each iteration. Note that when using while loops, i (or whatever variable is used) must be initialized before the loop.</p>
+
+							<h3>Loop Control Statements</h3>
+							<p>Python provides several control statements to manage the flow of loops:</p>
+							<ul>
+								<li><code>break</code>: Terminates the loop immediately.</li>
+								<li><code>continue</code>: Skips the rest of the current iteration and moves to the next one.</li>
+							</ul>
+							<pre><code>for num in range(1, 10):&#10;    if num == 3:&#10;        continue&#10;    if num == 6:&#10;        break&#10;    print(num)</code></pre>
+							<p>This assigns <code>num</code> the initial value of 1 and will print the numbers 1, 2, 4, and 5, skipping 3 because of <code>continue</code> and stopping completely when <code>num</code> equals 6 because of <code>break</code>, even though range was intially set to 10.</p>
+
+							<h3>Else Clause in Loops</h3>
+							<p>The <code>else</code> clause can be used with both <code>for</code> and <code>while</code> loops. It is executed when the loop condition becomes false:</p>
+							<pre><code>for i in range(5):&#10;    print(i)&#10;else:&#10;    print("Loop finished")</code></pre>
+							<p>Code in the else block will only execute if the loop completes normally (i.e., without being terminated by a <code>break</code> statement).</p>
+							<p>Example of when the else statement wouldn't be executed:</p>
+							<pre><code>for i in range(5):&#10;    print(i)&#10;    if i == 3:&#10;        break&#10;else:&#10;    print("Loop finished")</code></pre>
+							<p>Since the loop is terminated by <code>break</code> before getting to 5, the else block is skipped.</p>
+
+							<h2><u>Functions</u></h2>
+							<p>Functions in Python are used when one expects to use certain blocks of code multiple times, but using different arguments each time. They are defined using the <code>def</code> keyword:</p>
+							<h3>Functions Without Arguments</h3>
+							<p>Functions without arguments are defined with an empty set of parentheses:</p>
+							<pre><code>def greet():&#10;    print("Hello, World!")</code></pre>
+							<p>The above creates a function called <code>greet</code> that will always print "Hello, World!" when the function is called, no matter what.</p>
+							<h3>Functions with arguments</h3>
+							<p>If you want a function to be able to change its output based on an input, we can pass arguments into the function by assigning them a name in the () of the function declaration line:</p>
+							<pre><code>def greet(name):&#10;    print(f"Hello, {name}!")</code></pre>
+							<p>In the above block, the name of the function is <code>greet</code>, and the <code>name</code> parameter is used to pass a value to the function. Values only need to be passed into a function as parameters if the function will use it. In this case since it's printing the name, we need to pass a value into it as <code>name</code> as an argument so it knows what <code>name</code> is in the print line.</p>
+							<p>To call a function, you simply use its name followed by parentheses containing any required arguments:</p>
+							<pre><code>greet("Alice")  # Output: Hello, Alice!</code></pre>
+							<p>The above will call the <code>greet</code> function from before, passing in the string "Alice" as the <code>name</code> parameter of the function. In other words, "send the string 'Alice' to the <code>greet</code> function and set the function's <code>name</code> parameter to it, then do what the function says." Another word for parameter is "argument".</p>
+							<p>We can call a function multiple times in a row with different arguments, as they will execute independently:</p>
+							<pre><code>greet("Alice")  # Output: Hello, Alice!&#10;greet("Bob")    # Output: Hello, Bob!</code></pre>
+							<p>We can also pre-assign a value to the variable that we pass into the function:</p>
+							<pre><code>name = "Alice"&#10;greet(name)  # Output: Hello, Alice!</code></pre>
+
+							<h3>Return</h3>
+							<p></p>
+
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
