@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/Lycoris.png" alt="" /></span><span class="title">HANAKOTOBA</span>
 								</a>
 
 							<!-- Nav -->
@@ -44,26 +44,304 @@
 							<li><a href="C%23.html">C#</a></li>
 							<li><a href="cpp.html">C++</a></li>
 							<li><a href="Java.html">Java</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
-							<h1>Java</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
+                              <div class="inner">
+                                   <h1>Java</h1>
+                                   <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+                                   <p>Welcome to Java! Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible, meaning it can be used to build applications that run on any platform that supports Java.</p>
+                                   <h3>Comments in Java</h3>
+                                   <p>In Java, you can add comments (notes that aren't executed by the program, for others looking at your code to read) to your code using two different syntaxes:</p>
+                                   <ul>
+                                        <li><strong>Single-line comments</strong> start with two forward slashes (<code>//</code>) and continue to the end of the line.</li>
+                                        <li><strong>Multi-line comments</strong> start with a forward slash and an asterisk (<code>/*</code>) and end with an asterisk and a forward slash (<code>*/</code>).</li>
+                                   </ul>
+
+                                   <h2><u>Variables</u></h2>
+                                   <p>In Java, each variable has a declared type that determines what kind of value it can hold. Primitive types are Java's basic built-in types for simple values, such as whole numbers, decimal numbers, characters, and true-or-false values. You include the type when declaring a variable, and it cannot later be assigned a value of an incompatible type.</p>
+
+                                   <h3>Declaring Numbers</h3>
+                                   <p>In Java, you declare a variable's type before assigning a number to it:</p>
+                                   <p>Int: <code>int x = 5;</code></p>
+                                   <p>Decimal (double): <code>double x = 5.0;</code></p>
+                                   <p><code>int</code> and <code>double</code> are primitive types.</p>
+
+                                   <h3>Declaring Strings</h3>
+                                   <p>Strings in Java are sequences of characters enclosed in double quotes.</p>
+                                   <p>String: <code>String x = "Hello, World!";</code></p>
+                                   <p>Note: Unlike Python, Java does not use single quotes for strings; single quotes are used for individual <code>char</code> values (single characters).</p>
+
+                                   <h3>Declaring Booleans</h3>
+                                   <p>Booleans in Java represent the truth values <code>true</code> and <code>false</code>. The values are lowercase, and a variable must be declared with the primitive type <code>boolean</code>.</p>
+                                   <p>True: <code>boolean x = true;</code></p>
+                                   <p>False: <code>boolean x = false;</code></p>
+                                   <p><code>boolean</code> is a primitive type.</p>
+
+                                   <h3>Null References</h3>
+                                   <p>In Java, you can assign <code>null</code> to a reference variable, such as a <code>String</code>, to indicate that it does not currently refer to an object. Primitive variables such as <code>int</code> and <code>boolean</code> cannot be assigned <code>null</code>.</p>
+                                   <p>Null reference: <code>String x = null;</code></p>
+                                   <p><code>null</code> is not the same as <code>0</code> or an empty string; it means the reference does not refer to an object.</p>
+                                   <h3>Type Changing</h3>
+                                   <p>Java is statically typed, which means that the type of a variable is declared when initialized and cannot be changed, even when assigning new values. However, you can convert a value itself to another type.</p>
+                                   <p>Widening: Converting a smaller type to a larger type (e.g., <code>int</code> to <code>double</code>): <code>double x = 5;</code> will result in the value 5.0 instead of 5.</p>
+                                   <p>Narrowing: Converting a larger type to a smaller type (e.g., <code>double</code> to <code>int</code>), which may result in loss of precision: <code>int x = (int) 5.8;</code> Here, the decimal part is truncated and lost, resulting in just 5.</p>
+                                   <p>Converting text to a number: <code>int x = Integer.parseInt("5");</code> This will turn the string "5" into the integer 5. This does not work with decimal numbers, however. Instead, you can use <code>Double.parseDouble("5.0")</code> to convert a string to a double.</p>
+
+                                   <h2><u>Input/Output</u></h2>
+                                   <h3>Input</h3>
+                                   <p>Java uses classes such as <code>Scanner</code> to read input, and <code>System.out</code> to display output. To read a line of text from the user, import <code>java.util.Scanner</code>, create a <code>Scanner</code> connected to <code>System.in</code>, and call <code>nextLine()</code>:</p>
+                                   <pre><code>import java.util.Scanner;&#10;&#10;Scanner scanner = new Scanner(System.in);&#10;System.out.print("What is your name? ");&#10;String name = scanner.nextLine();</code></pre>
+                                   <p>This displays "What is your name? ", reads a line from the user, and assigns that text to the <code>name</code> variable. Since <code>name</code> is declared as a <code>String</code>, assigning another line of text to it later would replace its current value.</p>
+                                   <p>To read an integer, use a method such as <code>nextInt()</code>:</p>
+                                   <pre><code>System.out.print("What is your age? ");&#10;int age = scanner.nextInt();</code></pre>
+
+                                   <h3>Static Output</h3>
+                                   <p>The <code>System.out.println()</code> method displays output followed by a line break:</p>
+                                   <p><code>System.out.println("Hello, World!");</code></p>
+                                   <p>The above example will display the text "Hello, World!" to the user.</p>
+
+                                   <h3>Variable Output</h3>
+                                   <p>You can also use <code>System.out.println()</code> to display the value of a variable:</p>
+                                   <pre><code>String name = "Alice";&#10;System.out.println(name);</code></pre>
+                                   <p>The above example will display the value of the variable <code>name</code>, which is "Alice".</p>
+
+                                   <h3>Static + Variable Output</h3>
+                                   <p>You can combine static text with a variable value using the <code>+</code> operator:</p>
+                                   <pre><code>String name = "Alice";&#10;System.out.println("Hello, " + name + "!");</code></pre>
+                                   <p>The above example will display the text "Hello, Alice!" to the user. In Java, the <code>+</code> operator joins strings and other values into one string for output.</p>
+
+                                   <h3>Newlines</h3>
+                                   <p>In Java, each call to <code>System.out.println()</code> ends with a line break, so subsequent calls appear on a new line.</p>
+                                   <pre><code>System.out.println("Hello, World!");&#10;System.out.println("How are you?");</code></pre>
+                                   <p>This will display "Hello, World!" on one line and "How are you?" on the next line.</p>
+                                   <p>Alternatively, you can use the <code>\n</code> escape sequence to insert a line-feed character within a single string:</p>
+                                   <pre><code>System.out.print("Hello, World!\nHow are you?");</code></pre>
+                                   <p>For a long expression split across multiple lines, Java treats line breaks as whitespace. For example, the expression can continue after an operator:</p>
+                                   <pre><code>int number1 = 5;&#10;int number2 = 10;&#10;int sum = number1 +&#10;    number2;</code></pre>
+                                   <p>The line break does not end the statement; the semicolon does.</p>
+                                   <p>Unlike Python, Java requires a semicolon at the end of most statements. A newline alone does not terminate a statement.</p>
+
+                                   <h2><u>Conditionals</u></h2>
+                                   <p>Conditionals in Java execute different blocks of code based on conditions. The most common conditional statement is <code>if</code>.</p>
+                                   <pre><code>int age = 18;&#10;if (age &gt;= 18) {&#10;    System.out.println("You are an adult.");&#10;}</code></pre>
+                                   <p>This displays "You are an adult." when <code>age</code> is greater than or equal to 18. Java places the condition in parentheses and the block of code in braces.</p>
+
+                                   <h3>Conditional Operators</h3>
+                                   <p>Java provides comparison operators that can be used in conditions:</p>
+                                   <ul>
+                                        <li><code>==</code>: Equal to</li>
+                                        <li><code>!=</code>: Not equal to</li>
+                                        <li><code>&gt;</code>: Greater than</li>
+                                        <li><code>&lt;</code>: Less than</li>
+                                        <li><code>&gt;=</code>: Greater than or equal to</li>
+                                        <li><code>&lt;=</code>: Less than or equal to</li>
+                                   </ul>
+                                   <p>The equality operator uses two <code>=</code> signs. A single <code>=</code> assigns a value rather than comparing values.</p>
+                                   <pre><code>if (age == 18) {&#10;    System.out.println("Age is 18");&#10;}&#10;age = 18;</code></pre>
+                                   <p>The first statement checks whether <code>age</code> is 18; the last statement assigns 18 to <code>age</code>. For objects such as <code>String</code>, <code>==</code> compares references, not text content; use <code>.equals()</code> to compare string contents.</p>
+
+                                   <h3>Else and Else-If Statements</h3>
+                                   <p>Java uses <code>else</code> and <code>else if</code> to handle alternative conditions:</p>
+                                   <pre><code>int age = 17;&#10;if (age &gt;= 18) {&#10;    System.out.println("You are an adult.");&#10;} else {&#10;    System.out.println("You are not an adult.");&#10;}</code></pre>
+                                   <p>The <code>else</code> block runs if the <code>if</code> condition is false.</p>
+                                   <pre><code>int score = 85;&#10;if (score &gt;= 90) {&#10;    System.out.println("Grade: A");&#10;} else if (score &gt;= 80) {&#10;    System.out.println("Grade: B");&#10;} else {&#10;    System.out.println("Grade: C");&#10;}</code></pre>
+                                   <p>The <code>else if</code> block checks another condition if the earlier condition was false. Once one branch is taken, the remaining branches in that chain are skipped.</p>
+
+                                   <h3>Combining Conditions</h3>
+                                   <p>Java uses logical operators to combine or negate conditions:</p>
+                                   <ul>
+                                        <li><code>&amp;&amp;</code>: Both conditions must be true</li>
+                                        <li><code>||</code>: At least one condition must be true</li>
+                                        <li><code>!</code>: Negates a condition</li>
+                                   </ul>
+                                   <pre><code>int age = 18;&#10;boolean hasLicense = true;&#10;if (age &gt;= 18 &amp;&amp; hasLicense) {&#10;    System.out.println("You can drive.");&#10;}</code></pre>
+                                   <p>With <code>&amp;&amp;</code>, both conditions must be true; with <code>||</code>, at least one must be true. The <code>!</code> operator reverses a boolean value: for example, <code>!(age == 18)</code> is false when <code>age</code> is 18. You can combine any number of these logic operators in a single statement check.</p>
+
+                                   <h3>Single-Statement If</h3>
+                                   <p>If an <code>if</code> has only one statement, Java allows the braces to be omitted, though braces are often clearer and help prevent mistakes:</p>
+                                   <pre><code>if (age &gt;= 18)&#10;    System.out.println("You are an adult.");</code></pre>
+
+                                   <h3>Ternary Operator</h3>
+                                   <p>Java's ternary operator is a nice way to choose between two values based on a condition:</p>
+                                   <pre><code>int age = 18;&#10;String status = age &gt;= 18 ? "adult" : "not adult";</code></pre>
+                                   <p>This assigns <code>"adult"</code> to <code>status</code> if <code>age</code> is at least 18; otherwise, it assigns <code>"not adult"</code>. The expression can also be used in a <code>return</code> statement.</p>
+
+                                   <h3>Switch</h3>
+                                   <p>Java's <code>switch</code> statement selects a branch based on a value, making it useful when checking a variable against several specific values:</p>
+                                   <pre><code>int statusCode = 404;&#10;switch (statusCode) {&#10;    case 200:&#10;        System.out.println("OK");&#10;        break;&#10;    case 404:&#10;        System.out.println("Not Found");&#10;        break;&#10;    default:&#10;        System.out.println("Unknown Status");&#10;}</code></pre>
+                                   <p>The matching <code>case</code> runs, and <code>default</code> handles values not listed. In this traditional switch form, <code>break</code> exits the switch so execution does not continue into the next case.</p>
+
+                                   <h2><u>Loops</u></h2>
+                                   <p>Loops execute a block of code repeatedly. Java provides several loop forms, including <code>for</code> and <code>while</code> loops.</p>
+
+                                   <h3>For Loop</h3>
+                                   <p>Java's enhanced <code>for</code> loop iterates over each element in an array or other iterable collection:</p>
+                                   <pre><code>String[] fruits = {"apple", "banana", "cherry"};&#10;for (String fruit : fruits) {&#10;    System.out.println(fruit);&#10;}</code></pre>
+                                   <p>Here, <code>fruit</code> is the loop variable. On each loop of the loop, it holds the next element from <code>fruits</code>. Choose a descriptive variable name to make the code easier to understand.</p>
+                                   <p>Bad example of a loop variable name:</p>
+                                   <pre><code>for (String x : fruits) {&#10;    System.out.println(x);&#10;}</code></pre>
+
+                                   <h3>For Loop with Counter</h3>
+                                   <p>A traditional <code>for</code> loop is useful when you want to count through a range of numbers. Its parts:</p>
+                                   <ul>
+                                        <li>initialize a counter (int i = 0)</li>
+                                        <li>check a condition (i < 5, meaning if i is less than 5)</li>
+                                        <li>update the counter after each iteration (i++ increases i by 1)</li>
+                                   </ul>
+                                   <pre><code>for (int i = 0; i &lt; 5; i++) {&#10;    System.out.println(i);&#10;}</code></pre>
+                                   <p>This prints the numbers 0 through 4. You can set a different starting value and increment:</p>
+                                   <pre><code>for (int i = 2; i &lt; 10; i += 2) {&#10;    System.out.println(i);&#10;}</code></pre>
+                                   <p>This prints 2, 4, 6, and 8. The loop stops before <code>i</code> reaches 10, increasing by 2 each time.</p>
+
+                                   <h3>While Loop</h3>
+                                   <p>A <code>while</code> loop repeatedly executes its block as long as its condition is true:</p>
+                                   <pre><code>int i = 0;&#10;while (i &lt; 5) {&#10;    System.out.println(i);&#10;    i++;&#10;}</code></pre>
+                                   <p>This prints the value of <code>i</code>, then increases it by 1 on each iteration. Initialize the counter before the loop and update it inside the loop so the condition eventually becomes false.</p>
+
+                                   <h3>Loop Control Statements</h3>
+                                   <p>Java provides control statements to change how a loop proceeds:</p>
+                                   <ul>
+                                        <li><code>break</code>: Ends the loop immediately.</li>
+                                        <li><code>continue</code>: Skips the rest of the current iteration and continues with the next one.</li>
+                                   </ul>
+                                   <pre><code>for (int num = 1; num &lt; 10; num++) {&#10;    if (num == 3) {&#10;        continue;&#10;    }&#10;    if (num == 6) {&#10;        break;&#10;    }&#10;    System.out.println(num);&#10;}</code></pre>
+                                   <p>This prints 1, 2, 4, and 5. <code>continue</code> skips 3, and <code>break</code> ends the loop when <code>num</code> reaches 6.</p>
+
+                                   <h2><u>Classes and Objects</u></h2>
+                                   <p>In Java, classes define the structure and behavior of objects. A class is a blueprint for creating objects, and each object is an instance of its class. For example, a <code>Dog</code> class can define the information each dog object stores:</p>
+                                   <pre><code>class Dog {&#10;    String name;&#10;    String breed;&#10;&#10;    Dog(String name, String breed) {// the constructor&#10;        this.name = name;&#10;        this.breed = breed;&#10;    }&#10;}&#10;&#10;class Example {&#10;    public static void main(String[] args) {&#10;        Dog myDog = new Dog("Doge", "Shiba Inu");&#10;    }&#10;}</code></pre>
+                                   <p>The <code>Dog</code> class has two fields, <code>name</code> and <code>breed</code>. Its constructor, also named <code>Dog</code>, runs when a new <code>Dog</code> object is created with <code>new</code>. The <code>myDog</code> variable refers to an instance initialized with the name "Doge" and breed "Shiba Inu". You can create other <code>Dog</code> objects with different values.</p>
+                                   <p>In the constructor, <code>this</code> refers to the object being initialized. In <code>this.name = name;</code>, the left-side <code>this.name</code> is that object's field, and the right-side <code>name</code> is the constructor parameter passed in. It's as if we were to say "the name of <u>this</u> object is the <code>name</code> that we passed in."</p>
+                                   <p>Note that the <code>class Example</code> and the following line containing <code>void main</code> simply represent the main body of a Java script, and isn't exclusive to the creation of the <code>Dog</code> object.</p>
+                                   <p>Classes and objects are central to object-oriented programming (OOP) in Java and can help organize related data and behavior.</p>
+
+                                   <h2><u>Methods</u></h2>
+                                   <p>Methods are reusable blocks of code declared inside a class. A method can receive input through parameters and may return a value. Java requires each method to declare a return type; use <code>void</code> when it does not return a value.</p>
+
+                                   <h3>Methods Without Parameters</h3>
+                                   <p>A method without parameters has empty parentheses. This example defines and calls a method that prints a greeting:</p>
+                                   <pre><code>class Example {&#10;    static void greet() {&#10;        System.out.println("Hello, World!");&#10;    }&#10;&#10;    public static void main(String[] args) {&#10;        greet();&#10;    }&#10;}</code></pre>
+                                   <p>The method called <code>greet</code> prints "Hello, World!" each time it is called. It is declared <code>static</code> so <code>main</code> can call it directly on the class.</p>
+
+                                   <h3>Methods with Parameters</h3>
+                                   <p>Parameters let a method receive values. In Java, each parameter must have a declared type:</p>
+                                   <pre><code>class Example {&#10;    static void greet(String name) {&#10;        System.out.println("Hello, " + name + "!");&#10;    }&#10;&#10;    public static void main(String[] args) {&#10;        greet("Alice");&#10;    }&#10;}</code></pre>
+                                   <p>Here, <code>name</code> is a <code>String</code> parameter. Calling <code>greet("Alice")</code> passes the string <code>"Alice"</code> as an argument, so the method prints "Hello, Alice!".</p>
+                                   <p>Note that the <code>void main</code> line is just the main body of the Java script, where the code execution statements are put, and is not exclusive to method calls.</p>
+                                   <p>You can call a method more than once with different arguments:</p>
+                                   <pre><code>greet("Alice");  // Output: Hello, Alice!&#10;greet("Bob");    // Output: Hello, Bob!</code></pre>
+                                   <p>You can also store an argument in a variable and pass that variable to the method:</p>
+                                   <pre><code>String name = "Alice";&#10;greet(name);  // Output: Hello, Alice!</code></pre>
+
+                                   <h3>Return</h3>
+                                   <p>A method can return a value to the code that called it. Its declared return type must match the type of value it returns:</p>
+                                   <pre><code>class Example {&#10;    static int add(int a, int b) {&#10;        return a + b;&#10;    }&#10;&#10;    public static void main(String[] args) { // this line marks the start of the main body&#10;        int result = add(3, 5);  // result is now 8&#10;        System.out.println(add(3, 5));  // Output: 8&#10;    }&#10;}</code></pre>
+                                   <p>The <code>add</code> method takes two <code>int</code> parameters and returns their sum. You can store the returned value (like we did with int result) or use it directly (outputted the returned result directly without assigning it to a variable).</p>
+
+                                   <h2><u>Summary + Combined Examples</u></h2>
+                                   <p>Now let's combine each concept we've learned into one code block. Let's say that I want to create a script that will be used to manage a character in a fantasy game, keeping track of their health, mana, and what would happen if they got attacked.</p>
+                                   <p>You can click on the comparison buttons to see how the syntax differs between Java and the other languages on this site.</p>
+
+                                   <pre><code>import java.util.Scanner;
+
+<strong>// Creating a class:</strong>
+class Character {
+    String name;
+    int health;
+    int mana;
+
+    Character(String name, int health, int mana) { // uses a constructor to initialize the Character object with a name, health, and mana. What their name is and how much health and mana they have will be decided when we create the character by passing arguments to the constructor.
+	   this.name = name;
+	   this.health = health;
+	   this.mana = mana;
+    }
+
+<strong>// Creating a method:</strong>
+    void takeDamage(int damage) {
+	   this.health -= damage; // this line reduces the Character's health by the amount of damage taken. The -= operator is a shorthand for this.health = this.health - damage.
+    }
+}
+
+class Example {
+<strong>// Creating a method to heal a character:</strong>
+    static void heal(Character character, int amount) {
+	   character.health += amount; // this line increases the character's health by the specified amount.
+    }
+
+    public static void main(String[] args) { // this line marks the start of the main body of the script, where the code execution statements are put. The main method is the entry point of a Java program.
+<strong>// Declaring a variable:</strong>
+	  int takeThisMuchDamage;
+
+<strong>// Creating an object using a class:</strong>
+	   Character player1 = new Character("Alice", 100, 50);
+
+<strong>// Input:</strong>
+	   Scanner scanner = new Scanner(System.in);
+	   System.out.print("How much damage should the character take? ");
+	   takeThisMuchDamage = scanner.nextInt(); // we use Scanner to get user input as an integer and assign it to takeThisMuchDamage. For this example, assume the user enters a valid number &gt;= 0.
+
+<strong>// Calling an object's method, using the variable we declared earlier:</strong>
+	   player1.takeDamage(takeThisMuchDamage);
+
+<strong>// Method call:</strong>
+	   heal(player1, 20);
+
+<strong>// Output:</strong>
+	   System.out.println(player1.name + " has " + player1.health + " health and " + player1.mana + " mana.");
+
+<strong>// Conditional:</strong>
+	   if (player1.health > 10) {
+		  System.out.println("Congrats! " + player1.name + " is still alive!"); // if the character's health is more than 10, this will trigger and the rest of the if/else-if/else block will be skipped.
+	   } else if (player1.health &gt; 0) { // this will trigger if the character's health is greater than 0 but not greater than 10.
+		  System.out.println(player1.name + " is critically injured. Be Careful!");
+	   } else {
+		  System.out.println("Your character has died. Game over."); // this will trigger at any point where health is less than or equal to 0, since all other possible health amount conditions have already been checked.
+	   }
+
+<strong>// Loops:</strong>
+	   // Let's say that the character is poisoned, and will take damage over time:
+	   if (player1.health &gt; 0) {
+		  while (player1.health &gt; 0) { // while the character's health is greater than 0, this loop will continue to run.
+			 player1.takeDamage(5); // the character takes 5 damage each iteration of the loop.
+			 System.out.println(player1.name + " takes 5 poison damage and now has " + player1.health + " health."); // this output occurs each time the loop repeats.
+		  }
+		  System.out.println("Your character has died from the poison."); // this line runs after the loop ends because the loop condition is no longer true.
+	   }
+    }
+}
+</code></pre>
+                                   <p>Let's explain what we did above:</p>
+                                   <ol>
+                                        <li>We created a <code>Character</code> class with a name, health, and mana.</li>
+                                        <li>We made a method inside the class so that any <code>Character</code> could take damage.</li>
+                                        <li>We created a <code>heal</code> method that increases a character's health by the amount passed in when called.</li>
+                                        <li>We declared the variable <code>takeThisMuchDamage</code> so that we could assign it a value later based on user input. In Java, the variable has a declared type and must be assigned before it is used.</li>
+                                        <li>We created a <code>Character</code> object named <code>player1</code>, with the name "Alice", 100 health, and 50 mana.</li>
+                                        <li>We took input from the user, read it as an integer, and assigned it to <code>takeThisMuchDamage</code>.</li>
+                                        <li>We called the <code>takeDamage</code> method on <code>player1</code>, using the amount specified by the user's input.</li>
+                                        <li>We called the <code>heal</code> method to heal <code>player1</code> by 20.</li>
+                                        <li>We displayed <code>player1</code>'s current health and mana.</li>
+                                        <li>We used a conditional to check <code>player1</code>'s health and display an appropriate message.</li>
+                                        <li>If <code>player1</code> was still alive, we used a loop to simulate them taking poison damage until their health was no longer above 0.</li>
+                                        <li>When <code>player1</code>'s health dropped to 0 or less, we displayed a message after the poison loop saying that they had died from the poison.</li>
+                                   </ol>
+                                   <p>With all of the code above, we can create a character, have it take a single instance of damage, take damage over time, heal it, and change the amount of damage it takes!</p>
+                                   <p>Now that you've seen a longer chunk of script, a couple of final things to note:</p>
+                                   <ol>
+                                        <li>In Java, braces define blocks of code, such as classes, methods, conditionals, and loops. Indentation helps make the structure easier to read, but it does not define the blocks.</li>
+                                        <li>In Java, classes and methods are declared inside classes. The <code>main</code> method contains the statements that run the program, and it can create objects and call methods declared in the class.</li>
+                                   </ol>
+                              </div>
 					</div>
 
-				<!-- Footer -->
+					<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
 							<ul class="copyright">
-								<li>&copy;2026 Jack Roundy, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
+								<li>&copy;2026 Jack Roundy under HANAKOTOBA, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
 							</ul>
 						</div>
 					</footer>
@@ -76,6 +354,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/collapsible-sections.js"></script>
+			<script src="assets/js/language-comparison.js"></script>
 
 	</body>
 </html>

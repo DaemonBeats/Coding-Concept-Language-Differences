@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/Lycoris.png" alt="" /></span><span class="title">HANAKOTOBA</span>
 								</a>
 
 							<!-- Nav -->
@@ -44,7 +44,6 @@
 							<li><a href="C%23.html">C#</a></li>
 							<li><a href="cpp.html">C++</a></li>
 							<li><a href="Java.html">Java</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
 
@@ -53,9 +52,393 @@
 						<div class="inner">
 							<h1>C#</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p>Welcome to C#! C# is a high-level, statically typed programming language developed by Microsoft. It is commonly used with the .NET platform to build applications for the web, desktop, games, and more.</p>
+
+							<h3>Comments in C#</h3>
+							<p>In C#, you can add comments (notes that aren't executed by the program, for others looking at your code to read) to your code using two different syntaxes:</p>
+							<ul>
+								<li><strong>Single-line comments</strong> start with two forward slashes (<code>//</code>) and continue to the end of the line.</li>
+								<li><strong>Multi-line comments</strong> start with a forward slash and an asterisk (<code>/*</code>) and end with an asterisk and a forward slash (<code>*/</code>).</li>
+							</ul>
+
+							<h2><u>Variables</u></h2>
+							<p>In C#, each variable has a declared type that determines what kind of value it can hold. C# is statically typed, so a variable's type is determined at compile time and cannot be changed by assigning it a value of another type. You can write the type explicitly or use <code>var</code> to let the compiler infer it from the initial value.</p>
+
+							<h3>Declaring Numbers</h3>
+							<p>In C#, you declare a variable's type before assigning a number to it:</p>
+							<p>Int: <code>int x = 5;</code></p>
+							<p>Decimal (double): <code>double x = 5.0;</code></p>
+							<p><code>int</code> and <code>double</code> are value types. C# also has other numeric types, such as <code>float</code> and <code>decimal</code>, which represent different levels of precision for a decimal number.</p>
+
+							<h3>Declaring Strings</h3>
+							<p>Strings in C# are sequences of characters enclosed in double quotes. The built-in <code>string</code> type represents text.</p>
+							<p>String: <code>string x = "Hello, World!";</code></p>
+							<p>Note: unlike Python, single quotes are used for individual <code>char</code> values, such as <code>char letter = 'A';</code>.</p>
+
+							<h3>Declaring Booleans</h3>
+							<p>Booleans in C# represent the truth values <code>true</code> and <code>false</code>. The values are lowercase, and a variable is declared with the type <code>bool</code>.</p>
+							<p>True: <code>bool x = true;</code></p>
+							<p>False: <code>bool x = false;</code></p>
+
+							<h3>Null Values</h3>
+							<p>In C#, <code>null</code> means that a reference does not refer to an object. With nullable reference types enabled, add <code>?</code> to a reference type that is allowed to hold <code>null</code>. Value types can also be made nullable with <code>?</code>.</p>
+							<p>Nullable reference: <code>string? x = null;</code></p>
+							<p>Nullable value type: <code>int? x = null;</code></p>
+							<p><code>null</code> is not the same as <code>0</code> or an empty string; it represents the absence of a value or object reference.</p>
+
+							<h3>Type Changing</h3>
+							<p>C# is statically typed, which means a variable's type cannot be changed by assigning a value of another type. You can convert a value itself to another type.</p>
+							<p>Widening: Converting a smaller numeric type to a larger one (e.g., <code>int</code> to <code>double</code>): <code>double x = 5;</code> stores the value as 5.0 instead of 5.</p>
+							<p>Narrowing: Converting a larger numeric type to a smaller one (e.g., <code>double</code> to <code>int</code>) may lose information. <code>int x = (int)5.8;</code> truncates the decimal part, resulting in 5 and the loss of the .8.</p>
+							<p>Converting text to a number: <code>int x = int.Parse("5");</code> converts the string "5" to the integer 5. For decimal values, use <code>double.Parse("5.0")</code>. Parsing can fail if the text is not a valid number; methods such as <code>int.TryParse</code> can be used to handle invalid input.</p>
+
+							<h2><u>Input/Output</u></h2>
+							<h3>Input</h3>
+							<p>C# uses the <code>Console</code> class for basic text input and output. The <code>Console.ReadLine()</code> method reads a line of text from the user:</p>
+							<pre><code>string name = Console.ReadLine();</code></pre>
+							<p>To prompt the user first, write a message without ending the line:</p>
+							<pre><code>Console.Write("What is your name? ");
+string name = Console.ReadLine();</code></pre>
+							<p>This displays "What is your name? ", reads a line from the user, and assigns that text to <code>name</code>. Since <code>name</code> is a <code>string</code>, assigning another line of text to it later would replace its current value.</p>
+							<p><code>Console.ReadLine()</code> returns text, so convert it when you need a number. This example assumes the user enters valid numeric text:</p>
+							<pre><code>Console.Write("What is your age? ");
+int age = int.Parse(Console.ReadLine());</code></pre>
+
+							<h3>Static Output</h3>
+							<p>The <code>Console.WriteLine()</code> method displays output and then moves to a new line:</p>
+							<pre><code>Console.WriteLine("Hello, World!");</code></pre>
+							<p>The above example displays the text "Hello, World!" to the user.</p>
+
+							<h3>Variable Output</h3>
+							<p>You can also use <code>Console.WriteLine()</code> to display the value of a variable:</p>
+							<pre><code>string name = "Alice";
+Console.WriteLine(name);</code></pre>
+							<p>The above example displays the value of <code>name</code>, which is "Alice".</p>
+
+							<h3>Static + Variable Output</h3>
+							<p>You can combine static text with variable values using string interpolation. Place a <code>$</code> before the opening quote and put variable names inside braces:</p>
+							<pre><code>string name = "Alice";
+Console.WriteLine($"Hello, {name}!");</code></pre>
+							<p>The above example displays "Hello, Alice!".</p>
+
+							<h3>Newlines</h3>
+							<p><code>Console.WriteLine()</code> adds a newline after its output. <code>Console.Write()</code> does not, so subsequent output continues on the same line:</p>
+							<pre><code>Console.WriteLine("Hello, World!");
+Console.WriteLine("How are you?");</code></pre>
+							<p>This displays "Hello, World!" on one line and "How are you?" on the next line. You can also use the <code>\n</code> escape sequence within a string:</p>
+							<pre><code>Console.WriteLine("Hello, World!\nHow are you?");</code></pre>
+							<p>Long expressions can be split across source lines while remaining one statement, as long as the statement ends with a semicolon:</p>
+							<pre><code>int x = (
+    number1
+    + number2
+); // this is all one statement, since there's no semicolon until the end</code></pre>
+							<p>C# uses semicolons to end most statements. Whitespace and newlines do not, by themselves, end a statement.</p>
+
+							<h2><u>Conditionals</u></h2>
+							<p>Conditionals in C# execute different blocks of code based on conditions. The most common conditional statement is the <code>if</code> statement:</p>
+							<pre><code>int age = 18;
+if (age &gt;= 18) {
+    Console.WriteLine("You are an adult.");
+}</code></pre>
+							<p>This displays "You are an adult." if <code>age</code> is greater than or equal to 18. C# places the condition in parentheses and uses braces (<code>{}</code>) to mark the block.</p>
+
+							<h3>Conditional Operators</h3>
+							<p>C# provides several comparison operators that can be used with <code>if</code> statements:</p>
+							<ul>
+								<li><code>==</code>: Equal to</li>
+								<li><code>!=</code>: Not equal to</li>
+								<li><code>&gt;</code>: Greater than</li>
+								<li><code>&lt;</code>: Less than</li>
+								<li><code>&gt;=</code>: Greater than or equal to</li>
+								<li><code>&lt;=</code>: Less than or equal to</li>
+							</ul>
+							<p>The equality operator uses two <code>=</code> signs. A single <code>=</code> assigns a value rather than comparing values:</p>
+							<pre><code>int age = 18;
+if (age == 18) {
+    Console.WriteLine("Age is 18");
+}
+age = 18;</code></pre>
+							<p>The <code>if</code> condition checks whether <code>age</code> is 18, while the final line assigns 18 to <code>age</code>. These are separate statements.</p>
+
+							<h3>Else and Else If Statements</h3>
+							<p>C# uses <code>else</code> and <code>else if</code> to handle multiple conditions:</p>
+							<pre><code>int age = 17;
+if (age &gt;= 18) {
+    Console.WriteLine("You are an adult.");
+} else {
+    Console.WriteLine("You are not an adult.");
+}</code></pre>
+							<p>The <code>else</code> block executes if the condition in the <code>if</code> statement is false.</p>
+							<pre><code>int score = 85;
+if (score &gt;= 90) {
+    Console.WriteLine("Grade: A");
+} else if (score &gt;= 80) {
+    Console.WriteLine("Grade: B");
+} else {
+    Console.WriteLine("Grade: C");
+}</code></pre>
+							<p>The <code>else if</code> block checks another condition if earlier conditions were false. Once an <code>if</code> or <code>else if</code> condition is true, the remaining branches in that conditional chain are skipped.</p>
+
+							<h3>Combining Conditions</h3>
+							<p>C# provides logical operators to combine multiple conditions:</p>
+							<ul>
+								<li><code>&amp;&amp;</code>: Both conditions must be true</li>
+								<li><code>||</code>: At least one condition must be true</li>
+								<li><code>!</code>: Negates the condition</li>
+							</ul>
+							<pre><code>int age = 18;
+bool hasLicense = true;
+if (age &gt;= 18 &amp;&amp; hasLicense) { // checks if both conditions are true
+    Console.WriteLine("You can drive.");
+}</code></pre>
+							<p>For <code>&amp;&amp;</code>, both conditions must be true; for <code>||</code>, at least one must be true. The <code>!</code> operator negates a condition. You can combine these operators to create more complex conditions.</p>
+
+							<h3>Single-Statement If</h3>
+							<p>If an <code>if</code> branch contains one statement, braces may be omitted, though using braces can make the code clearer and help prevent mistakes:</p>
+							<pre><code>if (age &gt;= 18)
+    Console.WriteLine("You are an adult.");</code></pre>
+
+							<h3>Ternary Operator</h3>
+							<p>C# provides a ternary operator for simple conditional expressions and assignments:</p>
+							<pre><code>int age = 18;
+string status = age &gt;= 18 ? "adult" : "not adult";</code></pre>
+							<p>This assigns "adult" to <code>status</code> if <code>age</code> is greater than or equal to 18; otherwise, it assigns "not adult". You can also use the ternary expression directly in a return statement inside a class method:</p>
+							<pre><code>class Example {
+    static string GetStatus(int age) {
+	   return age &gt;= 18 ? "adult" : "not adult";
+    }
+}</code></pre>
+							<p>This method takes an age and returns the appropriate status based on the condition.</p>
+
+							<h3>Switch Statements</h3>
+							<p>C# uses the <code>switch</code> statement to select between a set of values:</p>
+							<pre><code>int statusCode = 404;
+switch (statusCode) {
+    case 200:
+	   Console.WriteLine("OK");
+	   break;
+    case 404:
+	   Console.WriteLine("Not Found");
+	   break;
+    default:
+	   Console.WriteLine("Unknown Status");
+	   break;
+}</code></pre>
+							<p>The <code>switch</code> statement checks <code>statusCode</code> and executes the matching <code>case</code>. The <code>break</code> statements leave the switch after a case executes, and <code>default</code> handles values not listed. A switch is useful for a limited set of specific values; use <code>if</code>/<code>else if</code> for more complex conditions.</p>
+
+							<h2><u>Loops</u></h2>
+							<p>Loops execute a block of code repeatedly. C# provides <code>foreach</code>, <code>for</code>, and <code>while</code> loops.</p>
+
+							<h3>Foreach Loop</h3>
+							<p>The <code>foreach</code> loop iterates over each element in a sequence, such as an array or collection:</p>
+							<pre><code>string[] fruits = { "apple", "banana", "cherry" };
+foreach (string fruit in fruits) {
+    Console.WriteLine(fruit);
+}</code></pre>
+							<p>In simpler terms, this says "for each fruit in the sequence of fruits, print that specific fruit before moving on to the next one." The loop variable <code>fruit</code> takes on each element's value during an iteration. It can technically have another name, but descriptive names make code easier to understand.</p>
+							<p>Example of a bad loop variable name:</p>
+							<pre><code>foreach (string x in fruits) {
+    Console.WriteLine(x);
+}</code></pre>
+							<p>While this works, using a more descriptive name like <code>fruit</code> makes the code more readable and maintainable.</p>
+
+							<h3>For Loop with a Counter</h3>
+							<p>A traditional <code>for</code> loop can repeat a block while counting through a range of numbers:</p>
+							<pre><code>for (int i = 0; i &lt; 5; i++) {
+    Console.WriteLine(i);
+}</code></pre>
+							<p>This prints the numbers 0 through 4. The three parts of the loop header initialize <code>i</code>, check the condition before each iteration, and increment <code>i</code> after each iteration. The stop value 5 is not printed because the condition is <code>i &lt; 5</code>. You can change the starting value and increment:</p>
+							<pre><code>for (int i = 2; i &lt; 10; i += 2) {
+    Console.WriteLine(i);
+}</code></pre>
+							<p>This prints 2, 4, 6, and 8, counting up to 10 (not including 10) in steps of 2.</p>
+
+							<h3>While Loop</h3>
+							<p>The <code>while</code> loop executes a block repeatedly as long as its condition is true:</p>
+							<pre><code>int i = 0;
+while (i &lt; 5) {
+    Console.WriteLine(i);
+    i++;
+}</code></pre>
+							<p>This is basically saying: "while <code>i</code> is less than 5, print the value of <code>i</code>, then increase it by 1." The variable must be initialized before the loop and updated so that the loop can eventually end.</p>
+
+							<h3>Loop Control Statements</h3>
+							<p>C# provides control statements to manage the flow of loops:</p>
+							<ul>
+								<li><code>break</code>: Terminates the loop immediately.</li>
+								<li><code>continue</code>: Skips the rest of the current iteration and moves to the next one.</li>
+							</ul>
+							<pre><code>for (int num = 1; num &lt; 10; num++) {
+    if (num == 3) {
+	   continue;
+    }
+    if (num == 6) {
+	   break;
+    }
+    Console.WriteLine(num);
+}</code></pre>
+							<p>The loop starts with <code>num</code> equal to 1 and prints 1, 2, 4, and 5. <code>continue</code> skips 3, and <code>break</code> ends the loop when <code>num</code> reaches 6. The condition <code>num &lt; 10</code> means the loop stops before 10.</p>
+							<h2><u>Methods</u></h2>
+							<p>Methods in C# are reusable blocks of code declared inside a class or another type. Methods can receive input through parameters and may return a value. C# requires a return type; use <code>void</code> when a method does not return a value. Unlike Python, C# does not have standalone functions at the top level in the traditional class-based model.</p>
+							<h3>Methods Without Parameters</h3>
+							<p>Methods without parameters have an empty set of parentheses:</p>
+							<pre><code>class Example {
+    static void Greet() {
+	   Console.WriteLine("Hello, World!");
+    }
+
+    static void Main() { // Main denotes the entry point of the program, and is where the program starts executing.
+	   Greet();
+    }
+}</code></pre>
+							<p>The method called <code>Greet</code> prints "Hello, World!" each time it is called. It is declared <code>static</code> so <code>Main</code> can call it directly on the class.</p>
+
+							<h3>Methods with Parameters</h3>
+							<p>Parameters let a method receive values. In C#, each parameter must have a declared type. Parameters are the variables in the method signature; arguments are the values passed when calling the method.</p>
+							<pre><code>class Example {
+    static void Greet(string name) {
+	   Console.WriteLine($"Hello, {name}!");
+    }
+
+    static void Main() {
+	   Greet("Alice");
+    }
+}</code></pre>
+							<p>Here, <code>name</code> is a <code>string</code> parameter. Calling <code>Greet("Alice")</code> passes the string <code>"Alice"</code> as an argument, so the method prints "Hello, Alice!".</p>
+							<p>You can call a method more than once with different arguments:</p>
+							<pre><code>Greet("Alice");  // Output: Hello, Alice!
+Greet("Bob");    // Output: Hello, Bob!</code></pre>
+							<p>You can also store an argument in a variable and pass that variable to the method:</p>
+							<pre><code>string name = "Alice";
+Greet(name);  // Output: Hello, Alice!</code></pre>
+
+							<h3>Return</h3>
+							<p>A method can return a value to the code that called it. Its declared return type must match the type of the value it returns:</p>
+							<pre><code>class Example {
+    static int Add(int a, int b) {
+	   return a + b;
+    }
+
+    static void Main() {
+	   int result = Add(3, 5);  // result is now 8
+	   Console.WriteLine(Add(3, 5));  // Output: 8
+    }
+}</code></pre>
+							<p>The <code>Add</code> method takes two <code>int</code> parameters and returns their sum. You can store the returned value or use it directly in an expression.</p>
+
+							<h2><u>Classes and Objects</u></h2>
+							<p>In C#, methods package reusable behavior, while classes define a kind of object and provide a way to create instances of it. A class is a blueprint for creating objects, while an object is an instance of a class. For example, a <code>Dog</code> class can define information each dog object stores:</p>
+							<pre><code>class Dog {
+    public string Name;
+    public string Breed;
+
+    public Dog(string name, string breed) { // this is the constructor
+	   Name = name;
+	   Breed = breed;
+    }
+}
+
+class Example {
+    static void Main() {
+	   Dog myDog = new Dog("Doge", "Shiba Inu");
+    }
+}</code></pre>
+							<p>The <code>Dog</code> class has two fields, <code>Name</code> and <code>Breed</code>. Its constructor, also named <code>Dog</code>, runs when a new <code>Dog</code> object is created with <code>new</code>. The <code>myDog</code> variable refers to an instance initialized with the name "Doge" and breed "Shiba Inu". You can create other <code>Dog</code> objects with different values.</p>
+							<p>Each <code>Dog</code> object has its own Name and Breed values. You could create a <code>Dog</code> named Bobby that is a golden retriever, or another named Scout that is a corgi.</p>
+							<p>In a constructor, the parameters provide the initial values for the new object. Here, <code>Name = name;</code> assigns the parameter <code>name</code> to the object's <code>Name</code> field. C# distinguishes these names by capitalization.</p>
+							<p>Classes and objects are central to object-oriented programming (OOP) in C# and can help organize related data and behavior.</p>
+
+							<h2><u>Summary + Combined Examples</u></h2>
+							<p>Now let's combine each concept we've learned into one code block. Let's say that I want to create a program that will be used to manage a character in a fantasy game, keeping track of their health, mana, and what would happen if they got attacked.</p>
+							<p>You can click on the comparison buttons to see how the syntax differs between C# and the other languages on this site.</p>
+
+							<pre><code>using System;
+
+<strong>// Creating a class:</strong>
+class Character {
+    public string Name;
+    public int Health;
+    public int Mana;
+
+    public Character(string name, int health, int mana) { // uses a constructor to initialize the Character object with a name, health, and mana. What their name is and how much health and mana they have will be decided when we create the character by passing arguments to the constructor.
+	   Name = name;
+	   Health = health;
+	   Mana = mana;
+    }
+
+<strong>// Creating a method (a function within a class):</strong>
+    public void TakeDamage(int damage) {
+	   Health -= damage; // this line reduces the Character's health by the amount of damage taken. The -= operator is a shorthand for Health = Health - damage.
+    }
+}
+
+class Example {
+<strong>// Creating a method to heal a character:</strong>
+    static void Heal(Character character, int amount) {
+	   character.Health += amount; // this line increases the character's health by the specified amount.
+    }
+
+    static void Main() {
+<strong>// Declaring a variable:</strong>
+	  int takeThisMuchDamage = 0;
+
+<strong>// Creating an object using a class:</strong>
+	   Character player1 = new Character("Alice", 100, 50);
+
+<strong>// Input:</strong>
+	   Console.Write("How much damage should the character take? ");
+	   takeThisMuchDamage = int.Parse(Console.ReadLine()!); // we read user input as text, convert it to an integer, and assign it to takeThisMuchDamage. For this example, assume the user enters a valid number &gt;= 0.
+
+<strong>// Calling an object's method, using the variable we declared earlier:</strong>
+	   player1.TakeDamage(takeThisMuchDamage);
+
+<strong>// Method call:</strong>
+	   Heal(player1, 20);
+
+<strong>// Output:</strong>
+	   Console.WriteLine($"{player1.Name} has {player1.Health} health and {player1.Mana} mana.");
+
+<strong>// Conditional:</strong>
+	   if (player1.Health &gt; 10) {
+		  Console.WriteLine($"Congrats! {player1.Name} is still alive!"); // if the character's health is more than 10, this will trigger and the rest of the if/else if/else block will be skipped.
+	   } else if (player1.Health &gt; 0) { // this will trigger if the character's health is greater than 0 but not greater than 10.
+		  Console.WriteLine($"{player1.Name} is critically injured. Be Careful!");
+	   } else {
+		  Console.WriteLine("Your character has died. Game over."); // this will trigger at any point where health is less than or equal to 0, since all other possible health amount conditions have already been checked.
+	   }
+
+<strong>// Loops:</strong>
+	   // Let's say that the character is poisoned, and will take damage over time:
+	   if (player1.Health &gt; 0) {
+		  while (player1.Health &gt; 0) { // while the character's health is greater than 0, this loop will continue to run.
+			 player1.TakeDamage(5); // the character takes 5 damage each iteration of the loop.
+			 Console.WriteLine($"{player1.Name} takes 5 poison damage and now has {player1.Health} health."); // this output occurs each time the loop repeats.
+		  }
+		  Console.WriteLine("Your character has died from the poison."); // this line runs after the loop ends because the loop condition is no longer true.
+	   }
+    }
+}</code></pre>
+							<p>Let's explain what we did above:</p>
+							<ol>
+								<li>We created a <code>Character</code> class with a name, health, and mana.</li>
+								<li>We made a method inside the class so that any <code>Character</code> could take damage.</li>
+								<li>We created a <code>Heal</code> method that increases a character's health by the amount passed in when called.</li>
+								<li>We declared and initialized <code>takeThisMuchDamage</code> so that we could assign it a value later based on user input. In C#, the variable has a declared type and must be assigned before it is used.</li>
+								<li>We created a <code>Character</code> object named <code>player1</code>, with the name "Alice", 100 health, and 50 mana.</li>
+								<li>We took input from the user, converted it to an integer, and assigned it to <code>takeThisMuchDamage</code>.</li>
+								<li>We called the <code>TakeDamage</code> method on <code>player1</code>, using the amount specified by the user's input.</li>
+								<li>We called the <code>Heal</code> method to heal <code>player1</code> by 20.</li>
+								<li>We displayed <code>player1</code>'s current health and mana.</li>
+								<li>We used a conditional to check <code>player1</code>'s health and display an appropriate message.</li>
+								<li>If <code>player1</code> was still alive, we used a loop to simulate them taking poison damage until their health was no longer above 0.</li>
+								<li>When <code>player1</code>'s health dropped to 0 or less, we displayed a message after the poison loop saying that they had died from the poison.</li>
+							</ol>
+							<p>With all of the code above, we can create a character, have it take a single instance of damage, take damage over time, heal it, and change the amount of damage it takes!</p>
+							<p>Now that you've seen a longer chunk of script, a couple of final things to note:</p>
+							<ol>
+								<li>In C#, braces define blocks of code, such as classes, methods, conditionals, and loops. Indentation helps make the structure easier to read, but it does not define the blocks. Most statements end with a semicolon.</li>
+								<li>In C#, methods are declared inside classes. A program's <code>Main</code> method is its entry point; it can create objects and call methods to perform the program's main tasks.</li>
+							</ol>
 						</div>
 					</div>
 
@@ -63,7 +446,7 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="copyright">
-								<li>&copy;2026 Jack Roundy, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
+								<li>&copy;2026 Jack Roundy under HANAKOTOBA, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
 							</ul>
 						</div>
 					</footer>
@@ -76,6 +459,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/collapsible-sections.js"></script>
+			<script src="assets/js/language-comparison.js"></script>
 
 	</body>
 </html>

@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/Lycoris.png" alt="" /></span><span class="title">HANAKOTOBA</span>
 								</a>
 
 							<!-- Nav -->
@@ -44,7 +44,6 @@
 							<li><a href="C%23.html">C#</a></li>
 							<li><a href="cpp.html">C++</a></li>
 							<li><a href="Java.html">Java</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
 
@@ -54,9 +53,15 @@
 							<h1>Python</h1>
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
 							<p>Welcome to Python! Python is a high-level, interpreted programming language known for its simplicity and readability and is often used for web development, data analysis, artificial intelligence, and more.</p>
+							<h3>Comments in Python</h3>
+							<p>In Python, you can add comments (notes that aren't executed by the program, for others looking at your code to read) to your code using the following syntax:</p>
+							<ul>
+								<li><strong>Single-line comments</strong> start with a hash symbol (<code>#</code>) and continue to the end of the line.</li>
+								<li>Python does not have a separate multi-line comment syntax. To comment out multiple lines, start each line with a hash symbol (<code>#</code>). Triple-quoted strings (<code>"""documentation"""</code> or <code>'''documentation'''</code>) are sometimes used for documentation over multiple lines, but they are strings rather than comments.</li>
+							</ul>
 
 							<h2><u>Variables</u></h2>
-							<p>In Python, variable names refer to values, and each value has a type. When you assign a value to a name, Python determines that value's type. Because Python is dynamically typed, you can later assign a value of a different type to the same name.</p>
+							<p>In Python, variable names refer to values, and each value has a type. When you assign a value to a name, Python automatically determines that value's type. Because Python is dynamically typed, you can later assign a value of a different type to the same name.</p>
 
 							<h3>Declaring numbers</h3>
 							<p>In Python, you can assign a numeric value to a variable without declaring its type first, like <code>x = 5</code>. Python determines the value’s type from what you assign (dynamic typing).</p>
@@ -186,7 +191,7 @@
 							<h3>For Loop with Range</h3>
 							<p>The <code>for</code> loop can also be used with the <code>range()</code> function to iterate over a sequence of numbers:</p>
 							<pre><code>for i in range(5):&#10;    print(i)</code></pre>
-							<p>This will print the numbers 0 through 4. The <code>range()</code> function generates a sequence of numbers from 0 to the specified number in range (not including the specified number itself.) You can also dictate the increment at which i increases, as well as where it starts from:</p>
+							<p>This will print the numbers 0 through 4. The <code>range()</code> function generates a sequence of numbers from 0 to the specified number in range (not including the specified number itself.) You can also dictate the increment at which i increases, as well as where it starts from, using the pattern (start, end (not included), increment amount):</p>
 							<pre><code>for i in range(2, 10, 2):&#10;    print(i)</code></pre>
 							<p>This will print the numbers 2, 4, 6, and 8, counting up to 10 (not including 10), in steps of 2.</p>
 
@@ -253,56 +258,57 @@ my_dog = Dog("Doge", "Shiba Inu")</code></pre>
 
 							<h2><u>Summary + Combined Examples</u></h2>
 							<p>Now let's combine each concept we've learned into one code block. Let's say that I want to create a script that will be used to manage a character in a fantasy game, keeping track of their health, mana, and what would happen if they got attacked.</p>
-<pre><code>
+							<p>You can click on the comparison buttons to see how the syntax differs between Python and the other languages on this site.</p>
 
-# Creating a class:
+
+<pre><code><strong># Creating a class:</strong>
 class Character: # creates a class named Character, meaning that we can make multiple different Characters that have the same properties.
 
-	def __init__(self, name, health, mana): # uses __init__ to initialize the Character object with a name, health, and mana. What their name is and how much health and mana they have will be decided when we call the class creator to make the character as arguments.
+	def __init__(self, name, health, mana): # uses __init__ to initialize the Character object with a name, health, and mana.
 		self.name = name
 		self.health = health
 		self.mana = mana
 
-	# Creating a method (a function within a class):
-	def take_damage(self, damage): # this method is called take_damage and its arguments are self and damage. The self argument is used to refer to the specific Character object that is taking damage, and the damage argument is the amount of damage being taken.
+	<strong># Creating a method (a function within a class):</strong>
+	def take_damage(self, damage):
 		self.health -= damage # this line reduces the Character's health by the amount of damage taken. The -= operator is a shorthand for self.health = self.health - damage.
 
 
-# Creating a function:
+<strong># Creating a function:</strong>
 def heal(character, amount): # this function will take a character object and an amount of health to heal them for. It will increase the character's health by the specified amount.
-     character.health += amount # this line increases the character's health by the specified amount.
+     character.health += amount
 
 
-# Declaring a variable:
+<strong># Declaring a variable:</strong>
 takeThisMuchDamage = None # we set the variable's value to None (which is of type NoneType), so that we can assign a value to it later based on user input.
 
-# Creating an object using a class:
+<strong># Creating an object using a class:</strong>
 player1 = Character("Alice", 100, 50) # we create a Character object named player1 with the name "Alice", 100 health, and 50 mana.
 
-# Input:
+<strong># Input:</strong>
 takeThisMuchDamage = int(input("How much damage should the character take? ")) # we use the input() function to get user input, and convert it to an integer using int(). We can change the type of the variable thanks to Python's dynamic typing. For now, we assume that the user will input a valid number >= 0.
 
-# Calling an object's method, using the variable we declared earlier:
-player1.take_damage(takeThisMuchDamage) # notice that when calling a method on an object, we use the object_name.method_name, with a period in between the two. We also don't need to pass in the self argument. Python automatically passes the object itself as the first argument to the method. So we only need to pass in the damage argument.
+<strong># Calling an object's method, using the variable we declared earlier:</strong>
+player1.take_damage(takeThisMuchDamage) # Python passes the object as self automatically, so only the damage argument is supplied.
 
-# Function call:
+<strong># Function call:</strong>
 heal(player1, 20) # we call the heal function, passing in player1 and 20 for the amount of health to heal. Notice that functions are called directly by name rather than through an object.
 
- # Output:
+ <strong># Output:</strong>
 print(f"{player1.name} has {player1.health} health and {player1.mana} mana.") # this will print the character's current health and mana. Notice that when referring to the attributes of an object, we use the object_name.attribute_name, with a period in between the two.
 
-# Conditional:
+<strong># Conditional:</strong>
 if player1.health > 10:
      print(f"Congrats! {player1.name} is still alive!") # if the character's health is more than 10, this will trigger and the rest of the if/elif/else block will be skipped.
-elif player1.health > 0: # this will trigger if the character's health is greater than 0 but not greater than 10.
+elif player1.health > 0:
      print(f"{player1.name} is critically injured. Be Careful!")
 else:
      print("Your character has died. Game over.") # this will trigger at any point where health is less than or equal to 0, since all other possible health amount conditions have already been checked.
 
-# Loops:
+<strong># Loops:</strong>
 # Let's say that the character is poisoned, and will take damage over time:
 if player1.health > 0:
-     while player1.health > 0: # while the character's health is greater than 0, this loop will continue to run.
+     while player1.health > 0:
 		player1.take_damage(5) # the character takes 5 damage each iteration of the loop.
 		print(f"{player1.name} takes 5 poison damage and now has {player1.health} health.") # this output occurs each time the loop repeats.
      print("Your character has died from the poison.") # this line runs after the loop ends because the loop condition is no longer true.
@@ -321,7 +327,7 @@ if player1.health > 0:
 								<li>We displayed <code>player1</code>'s current health and mana.</li>
 								<li>We used a conditional to check <code>player1</code>'s health and display an appropriate message.</li>
 								<li>If <code>player1</code> was still alive, we used a loop to simulate them taking poison damage until their health was no longer above 0.</li>
-								<li>If <code>player1</code> was still alive, we displayed a message after the poison loop saying that they had died from the poison.</li>
+								<li>When <code>player1</code>'s health dropped to 0 or less, we displayed a message after the poison loop saying that they had died from the poison.</li>
 							</ol>
 							<p>With all of the code above, we can create a character, have it take a single instance of damage, take damage over time, heal it, and change the amount of damage it takes!</p>
 							<p>Now that you've seen a longer chunk of script, a couple of final things to note:</p>
@@ -336,7 +342,7 @@ if player1.health > 0:
 					<footer id="footer">
 						<div class="inner">
 							<ul class="copyright">
-								<li>&copy;2026 Jack Roundy, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
+								<li>&copy;2026 Jack Roundy under HANAKOTOBA, CS4899 Exit Survey.</li><li>Template design: Phantom by <a href="http://html5up.net">HTML5 UP</a>, modified; licensed under CC BY 3.0.</li>
 							</ul>
 						</div>
 					</footer>
@@ -349,6 +355,8 @@ if player1.health > 0:
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/collapsible-sections.js"></script>
+			<script src="assets/js/language-comparison.js"></script>
 
 	</body>
 </html>
